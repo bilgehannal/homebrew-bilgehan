@@ -5,29 +5,39 @@
 class Fcode < Formula
   desc ""
   homepage "https://github.com/bilgehannal/foldercode-cli"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
-    url "https://github.com/bilgehannal/foldercode-cli/releases/download/v0.0.5/foldercode-cli_0.0.5_darwin_all.tar.gz"
-    sha256 "348627c75d5edc97789b401183fcd0073ae5f739a71e1a77205ad00ac24b5eee"
-
-    def install
-      bin.install "foldercode-cli"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v0.0.5/foldercode-cli_0.0.5_linux_arm64.tar.gz"
-      sha256 "c8608a56463720ac10061420c313dc0e13fbb2de57d446f32458d49f2e12aa06"
+    if Hardware::CPU.arm?
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v0.0.6/foldercode-cli_0.0.6_darwin_arm64.tar.gz"
+      sha256 "b6dda200748af18a55af147b18ed06eba04a5e97c43bdc2785bbadff66cb6691"
 
       def install
         bin.install "fcode"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v0.0.5/foldercode-cli_0.0.5_linux_amd64.tar.gz"
-      sha256 "43e2d732cce46f27d55bb4c93c39d50b2ea8684902f2aa99b78ba65f5cffc996"
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v0.0.6/foldercode-cli_0.0.6_darwin_amd64.tar.gz"
+      sha256 "57af76cdb2a01bf06a9d21bbb429e14daa1869b6646a37f492bce6a2f29ec17f"
+
+      def install
+        bin.install "fcode"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v0.0.6/foldercode-cli_0.0.6_linux_arm64.tar.gz"
+      sha256 "935863c5317e7253859389ecc20150b6065923ec97d3bfd95a041b976d04351a"
+
+      def install
+        bin.install "fcode"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v0.0.6/foldercode-cli_0.0.6_linux_amd64.tar.gz"
+      sha256 "c60390bf9d6ae8eb5c28ede4768a1efa38ce39583f45382d7ed68afda8bfb88a"
 
       def install
         bin.install "fcode"
