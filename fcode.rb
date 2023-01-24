@@ -5,20 +5,20 @@
 class Fcode < Formula
   desc ""
   homepage "https://github.com/bilgehannal/foldercode-cli"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.1/foldercode-cli_1.0.1_darwin_arm64.tar.gz"
-      sha256 "5a04af92050ae2c927c873a39528f4057123d55e50fb32910c597056f54130d6"
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.2/foldercode-cli_1.0.2_darwin_arm64.tar.gz"
+      sha256 "bb11601077969ef4c1542c22b0637f87a90b6a9e777070a4e8e0554ee22a93d0"
 
       def install
         bin.install "fcode"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.1/foldercode-cli_1.0.1_darwin_amd64.tar.gz"
-      sha256 "125bd1937ec691ed7068159736c769c4edb6f0d488d73b9aeeff2082adb09148"
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.2/foldercode-cli_1.0.2_darwin_amd64.tar.gz"
+      sha256 "1016740f1993c458168fd4f000103256e5e848fa92a0d94ca778f2f7d6476f92"
 
       def install
         bin.install "fcode"
@@ -28,16 +28,16 @@ class Fcode < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.1/foldercode-cli_1.0.1_linux_arm64.tar.gz"
-      sha256 "b0141d0eadb189287e4d19bcad428a82a878b359229287c08f68dd467fb33e3a"
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.2/foldercode-cli_1.0.2_linux_arm64.tar.gz"
+      sha256 "4f1ef43cc40618e1859d6bcf905cb3e63977b50cb268e4598c0f37312b10c20b"
 
       def install
         bin.install "fcode"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.1/foldercode-cli_1.0.1_linux_amd64.tar.gz"
-      sha256 "a49ef63f52331d5515a1bbfa5acbee20678af963e396b4fbb702e4d4eed9e5ff"
+      url "https://github.com/bilgehannal/foldercode-cli/releases/download/v1.0.2/foldercode-cli_1.0.2_linux_amd64.tar.gz"
+      sha256 "4965465ec1bc5da0430a595ea2551fcf06e5be476966eb01d5c317cd6ebcf65b"
 
       def install
         bin.install "fcode"
